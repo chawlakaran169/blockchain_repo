@@ -1,0 +1,130 @@
+/* body {
+      background: linear-gradient(to right, #232526, #414345);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar {
+      background-color: #000000cc;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .sidebar {
+      height: 100vh;
+      background-color: #1f1f1f;
+      padding-top: 30px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      z-index: 1;
+    }
+
+    .sidebar a {
+      padding: 15px 20px;
+      text-decoration: none;
+      color: #ddd;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .main {
+      margin-left: 240px;
+      padding: 20px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 40px 0;
+    }
+
+    .hero img {
+      max-width: 480px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #000;
+      left: -20px; 
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      margin: 60px 0 20px;
+    }
+
+    .form-box {
+      background-color: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00000050;
+    }
+
+    .form-control, .form-control:focus {
+      background-color: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+    }
+
+    .btn {
+      border: none;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px 0;
+      text-align: center;
+      background-color: #111;
+      color: #ccc;
+    } */
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px 0;
+    }
+    .hero-text {
+      max-width: 600px;
+    }
+    .hero img {
+      width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    footer {
+      background: #00000033;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+     /* .navbar-brand img {
+      height: 40px;
+    } */
+ 

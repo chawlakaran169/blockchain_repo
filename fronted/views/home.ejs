@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LandChain Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #1f1c2c, #928dab);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      flex: 1;
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .navbar-brand {
+      margin-bottom: 140px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+      position: absolute;
+      left: 20px;
+    }
+    .navbar-brand img {
+      height: 40px;
+    }
+    .profile-container {
+      position: absolute;
+      top: 10px;
+      right: 130px;
+      text-align: center;
+    }
+    .profile-container img {
+      
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 5px solid white;
+      margin-bottom: 6px;
+      object-fit: cover;
+    }
+    .profile-container .username {
+      margin-right: 40px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-top: 0;
+    }
+    .profile-container .welcome {
+      margin-right: 30px;
+      font-size: 0.85rem;
+      color: #ddd;
+    }
+    .account-section {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+    .illustration {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 30px 0;
+      padding: 0 20px;
+    }
+    .illustration-text {
+      max-width: 50%;
+      padding-right: 30px;
+    }
+    .illustration img {
+      max-width: 45%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      animation: fadeIn 2s ease-in-out;
+    }
+    .service-navbar {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 20px auto;
+    }
+    .service-navbar a {
+      padding: 8px 14px;
+      background: #a3b2c5;
+      color: rgb(7, 5, 5);
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+    .service-navbar a:hover {
+      background: #005bd1;
+    }
+    .btn-card {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      padding: 30px;
+      border-radius: 20px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: fadeInUp 1s ease both;
+    }
+    .btn-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 25px rgba(0, 114, 255, 0.4);
+    }
+    footer {
+      text-align: center;
+      color: #ccc;
+      padding: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <img src="/img/pfp1.jpg" alt="profile_picture" style="border-radius: 50%; border: 2px white; height: 100px; margin-right: 30px;">
+    <div class="username text-white"><%= user.name %></div>
+    <div class="welcome">Welcome to LandChain</div>
+  </div>
+
+  <div class="service-navbar">
+    <a href="/register_land">📝 Register Land</a>
+    <a href="/view_record">🔍 View Records</a>
+    <a href="/transfer_land">💱 Transfer Ownership</a>
+    <a href="/view_blockchain">📚 View Blockchain</a>
+  </div>
+<br><br><br>
+  <div class="account-section">
+    <div class="dropdown">
+      <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        ⚙️ Account
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="/edit_profile">✏️ Edit Profile</a></li>
+        <li><a class="dropdown-item" href="/logout">🚪 Logout</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-dark bg-transparent px-4 mt-5" >
+    <a class="navbar-brand" href="#">
+      <img src="/img/logo.jpg" alt="Logo">
+      LandChain
+    </a>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="illustration">
+      <div class="illustration-text">
+        <h2>Secure Land Registry with Blockchain</h2>
+        <p>Welcome to a new era of property registration — transparent, immutable, and secure. All your land details are now stored and validated using blockchain technology.</p>
+      </div>
+      <img src="/img/f0adcfdc5a372181f4358be3cb330af2.jpg" alt="Blockchain Illustration">
+    </div>
+
+    <div class="row g-4 justify-content-center text-center">
+      <div class="col-md-3">
+        <a href="/register_land" class="btn-card text-decoration-none d-block">
+          <h4>📅 Register Land</h4>
+          <p>Securely register land info.</p>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="/view_record" class="btn-card text-decoration-none d-block">
+          <h4>🔍 View Records</h4>
+          <p>Search land ownership history.</p>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="/transfer_land" class="btn-card text-decoration-none d-block">
+          <h4>💱 Transfer Ownership</h4>
+          <p>Move land to another user.</p>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="/view_blockchain" class="btn-card text-decoration-none d-block">
+          <h4>Transfer History</h4>
+          <p>Full immutable ledger.</p>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="/transfer_history" class="btn-card text-decoration-none d-block">
+          <h4>📚 View Blockchain</h4>
+          <p>History.</p>
+        </a>
+      </div>
+      
+    </div>
+  </div>
+
+  <footer class="mt-auto">
+    &copy; 2025 LandChain Dashboard | Empowering Land Ownership with Blockchain 🏡🔗
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

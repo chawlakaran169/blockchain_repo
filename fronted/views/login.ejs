@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login | LandChain</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/login.css" rel="stylesheet" />
+</head>
+<link href="/css/login.css" rel="stylesheet" />
+<body>
+ <%- include('partials/navbar') %>
+  <div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+    <div class="form-box">
+      <h3 class="text-center mb-4">🔐 Login</h3>
+      <form method="POST" action="/login">
+        <div class="mb-3">
+          <label>Email:</label>
+          <input type="email" class="form-control" name="email" required />
+        </div>
+        <div class="mb-3">
+          <label>Password:</label>
+          <input type="password" class="form-control" name="password" required />
+        </div>
+        <button class="btn btn-success w-100">Login</button>
+      </form>
+      <div class="link mt-3 text-center">
+        Don’t have an account? <a href="/signup">Sign up</a>
+      </div>
+    </div>
+  </div>
+  <script>
+  // If user presses back and session exists, redirect to /home
+  fetch('/check-auth')
+    .then(res => res.json())
+    .then(data => {
+      if (data.authenticated) {
+        window.location.href = '/home';
+      }
+    });
+</script>
+</body>
+
+</html>

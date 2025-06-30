@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup - LandChain</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to right, #232526, #414345);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .form-control, .form-control:focus {
+      background-color: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: white;
+    }
+
+    .btn {
+      background-color: #0dcaf0;
+      border: none;
+    }
+
+    .btn:hover {
+      background-color: #0bb2d4;
+    }
+
+    .link {
+      text-align: center;
+      margin-top: 10px;
+      color: #ddd;
+    }
+
+    .link a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+
+    .link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-box">
+    <h3 class="text-center mb-4">📝 Create Your LandChain Account</h3>
+    <form id="signupForm">
+      <div class="mb-3">
+        <label>Name:</label>
+        <input type="text" class="form-control" id="name" required />
+      </div>
+      <div class="mb-3">
+        <label>Email:</label>
+        <input type="email" class="form-control" id="email" required />
+      </div>
+      <div class="mb-3">
+        <label>Password:</label>
+        <input type="password" class="form-control" id="password" required />
+      </div>
+      <button type="submit" class="btn btn-info w-100">Sign Up</button>
+    </form>
+    <div class="link">
+      Already have an account? <a href="login.html">Login here</a>
+    </div>
+  </div>
+
+
+</body>
+</html>

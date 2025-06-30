@@ -1,0 +1,57 @@
+/* Body Styling */
+body {
+  background: linear-gradient(to right, #232526, #414345);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Form Box Styling */
+.form-box {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Input Fields */
+.form-control,
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Submit Button */
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+/* Link Styling */
+.link {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.link a {
+  color: #0dcaf0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}

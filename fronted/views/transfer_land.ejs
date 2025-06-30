@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Transfer Land Ownership | LandChain</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-dark text-white">
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">💱 Transfer Land Ownership</h2>
+    <form method="POST" action="/transfer_land">
+      <div class="mb-3">
+        <label>Land Name / ID:</label>
+        <input type="text" class="form-control" name="land" required />
+      </div>
+      <div class="mb-3">
+        <label>Recipient Email:</label>
+        <input type="email" class="form-control" name="to_email" required />
+      </div>
+      <button type="submit" class="btn btn-warning w-100">Transfer Ownership</button>
+    </form>
+  </div>
+</body>
+</html>
